@@ -29,7 +29,7 @@ Declare the entrypoint like so:
     "init": [
         {
             "adapter": "scala",
-            "value": "com.example.example_mod.ExampleMod"
+            "value": "com.example.example_mod.MyMod"
         }
     ]
 },
@@ -42,6 +42,6 @@ I might upgrade this API so that it resembles something like the official Kotlin
 
 ## License
 
-This template on the QuiltMC GitHub is licensed under the [Creative Common Zero v1.0 license](./LICENSE-TEMPLATE.md).
+This project is licensed under the [Creative Common Zero v1.0 license](./LICENSE-TEMPLATE.md).
 
-Mods created with this template are not automatically licensed under the CC0, and are not required to give any kind of credit back to QuiltMC for this template.
+Mods created with this template are not automatically licensed under the CC0, and are not required to give any kind of credit back to me for this project.
