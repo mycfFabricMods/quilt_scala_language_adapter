@@ -1,0 +1,35 @@
+{
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "me.mycf",
+		"id": "mycf_scala_adapter",
+		"version": "${version}",
+		"metadata": {
+			"name": "Scala language Adapter for QuiltMC",
+			"description": "Makes it possible to bootstrap mods in scala",
+			"contributors": {
+				"0xmycf": "Owner"
+			},
+			"contact": {
+				"issues": "https://github.com/mycfFabricMods/quilt_scala_langauge_adapter/issues",
+				"sources": "https://github.com/mycfFabricMods/quilt_scala_langauge_adapter"
+			},
+			"license": "Apache-2.0",
+			"icon": "assets/logo/icon.png"
+		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"language_adapters": {
+			"scala": "me.mycf.language_adapter.ScalaAdapter"
+		},
+		"depends": [
+			{
+				"id": "quilt_loader",
+				"versions": ">=0.17.0-"
+			},
+			{
+				"id": "quilted_fabric_api",
+				"versions": ">=2.0.0-"
+			}
+		]
+	}
+}
