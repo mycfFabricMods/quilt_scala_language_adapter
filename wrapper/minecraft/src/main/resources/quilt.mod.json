@@ -1,0 +1,42 @@
+{
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "org.quiltmc.uqsl",
+		"id": "uqsl_minecraft",
+		"version": "${version}",
+		"metadata": {
+			"name": "Unoffical Quilt Scala Libraries: Minecraft",
+			"description": "Minecraft module for UQSL",
+			"contributors": {
+				"0xmycf": "Owner"
+			},
+			"contact": {
+				"issues": "Needs changing",
+				"sources": "Needs changing"
+			},
+			"license": "Apache-2.0",
+			"icon": "assets/qkl/icon.png"
+		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"depends": [
+			{
+				"id": "quilt_loader",
+				"versions": ">=0.17.0"
+			}
+		]
+	},
+	"modmenu": {
+		"badges": [
+			"library"
+		],
+		"parent": {
+			"id": "uqsl",
+			"name": "Unofficial Quilt Scala Libraries",
+			"description": "Unofficial Official Scala libraries for modding in Scala",
+			"icon": "assets/qkl/icon.png",
+			"badges": [
+				"library"
+			]
+		}
+	}
+}

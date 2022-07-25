@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "quilt_loader": {
+    "group": "org.quiltmc.uqsl",
+    "id": "uqsl_qsl",
+    "version": "${version}",
+    "metadata": {
+      "name": "Unofficial Quilt Scala Libraries: QSL",
+      "description": "QSL module for QSL",
+      "contributors": {
+        "0xmycf": "Owner"
+      },
+      "contact": {
+        "issues": "Needs Changing",
+        "sources": "Needs Changing"
+      },
+      "license": "Apache-2.0",
+      "icon": "assets/qkl/icon.png"
+    },
+    "intermediate_mappings": "net.fabricmc:intermediary",
+    "depends": [
+      {
+        "id": "quilt_loader",
+        "versions": ">=0.17.0"
+      }
+    ]
+  },
+  "modmenu": {
+    "badges": [
+      "library"
+    ],
+    "parent": {
+      "id": "uqsl",
+      "name": "Unofficial Quilt Scala Libraries",
+      "description": "Unofficial Scala libraries for modding in Scala",
+      "icon": "assets/qkl/icon.png",
+      "badges": [
+        "library"
+      ]
+    }
+  }
+}

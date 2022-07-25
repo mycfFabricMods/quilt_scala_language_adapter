@@ -1,0 +1,9 @@
+
+dependencies {
+	// Scala 3 libs
+	include("org.scala-lang:scala3-library_3:${scala_version}")
+	api("org.scala-lang:scala3-library_3:${scala_version}")
+	// Depended on by Scala 3
+	include("org.scala-lang:scala-library:2.13.8")
+	api("org.scala-lang:scala-library:2.13.8")
+}

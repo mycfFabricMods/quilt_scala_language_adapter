@@ -1,0 +1,45 @@
+{
+	"schema_version": 1,
+	"quilt_loader": {
+		"group": "io.mycf.uqsl",
+		"id": "uqsl",
+		"version": "${version}",
+		"metadata": {
+			"name": "Unofficial Quilt Scala Libraries",
+			"description": "myfs's unofficial Scala libraries",
+			"contributors": {
+				"0xmycf": "Owner"
+			},
+			"contact": {
+				"issues": "needs changing",
+				"sources": "needs changing"
+			},
+			"license": "Apache-2.0",
+			"icon": "assets/uqsl/icon.png"
+		},
+		"intermediate_mappings": "net.fabricmc:intermediary",
+		"depends": [
+			{
+				"id": "quilt_loader",
+				"versions": ">=0.17.0-beta.3"
+			},
+			{
+				"id": "uqsl_core",
+				"versions": ">=${version}"
+			},
+			{
+				"id": "uqsl_qsl",
+				"versions": ">=${version}"
+			},
+			{
+				"id": "uqsl_minecraft",
+				"versions": ">=${version}"
+			}
+		]
+	},
+	"modmenu": {
+		"badges": [
+			"library"
+		]
+	}
+}

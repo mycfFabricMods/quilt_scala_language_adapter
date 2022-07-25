@@ -1,0 +1,18 @@
+plugins {
+	id "org.quiltmc.loom"
+}
+
+dependencies {
+	include project(":core")
+	api project(":core")
+
+	include project(":wrapper:qsl")
+	api project(":wrapper:qsl")
+
+	include project(":wrapper:minecraft")
+	api project(":wrapper:minecraft")
+}
+
+tasks.remapJar {
+	archiveBaseName.set("unofficial-quilt-scala-libraries")
+}

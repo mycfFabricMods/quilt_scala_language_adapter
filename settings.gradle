@@ -13,3 +13,10 @@ pluginManagement {
 		mavenCentral()
 	}
 }
+
+rootProject.name = "unofficial-quilt-scala-libraries"
+
+include(":core")
+include(":wrapper:minecraft")
+include(":wrapper:qsl")
+include(":fatjar")

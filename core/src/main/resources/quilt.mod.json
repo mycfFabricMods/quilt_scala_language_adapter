@@ -1,8 +1,8 @@
 {
 	"schema_version": 1,
 	"quilt_loader": {
-		"group": "me.mycf",
-		"id": "mycf_scala_adapter",
+		"group": "me.mycf.uqsl",
+		"id": "uqsl_core",
 		"version": "${version}",
 		"metadata": {
 			"name": "Scala language Adapter for QuiltMC",
@@ -19,7 +19,7 @@
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"language_adapters": {
-			"scala": "me.mycf.language_adapter.ScalaAdapter"
+			"scala": "io.mycf.language_adapter.ScalaAdapter"
 		},
 		"depends": [
 			{
