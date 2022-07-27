@@ -1,28 +1,28 @@
-package me.mycf.language_adapter
+package io.mycf.uqsl.core.adapter
 
 import org.quiltmc.loader.api.{LanguageAdapter, LanguageAdapterException, ModContainer}
 
 class ScalaAdapter extends LanguageAdapter:
 
   override def create[T](mod: ModContainer, value: String, aClass: Class[T]): T = {
-    val scalaObject = getClass(value + "$")
+    val clazz = getClass(value + "$")
+      .map { _.getField("MODULE$").get(null).asInstanceOf[T] }
+      .orElse {
+        getClass(value)
+          .map { _.getDeclaredConstructor().newInstance().asInstanceOf[T] }
+      }
 
-    scalaObject match {
-      case Right(clazz) => clazz.getField("MODULE$").get(null).asInstanceOf[T]
-      case Left(error)  =>
-        val scalaClass = getClass(value)
-        scalaClass match {
-          case Right(clazz) => clazz.getDeclaredConstructor().newInstance().asInstanceOf[T]
-          case Left(error2) => throw LanguageAdapterException(s"Couldn't match declared $value with neither $error or $error2")
-        }
+    clazz match {
+      case None        => throw LanguageAdapterException(s"Class: $value cannot be found or instantiated.")
+      case Some(ans)   => ans
     }
   }
 
-  private def getClass(value: String): Either[String, Class[?]] = {
+  private def getClass(value: String): Option[Class[?]] = {
     try {
-      Right(Class.forName(value))
+      Option(Class.forName(value))
     } catch {
-        case _: ClassNotFoundException => Left(s"$value")
+        case _: ClassNotFoundException => None
     }
   }
 
