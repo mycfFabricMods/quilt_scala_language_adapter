@@ -21,9 +21,9 @@ object Vec3fOps:
       thiz.getZ + other.getZ
     )
 
-  /**
-  * Subtracts a [[Vec3f]] from a [[Vec3f]].
-  */
+    /**
+     * Subtracts a [[Vec3f]] from a [[Vec3f]].
+     */
     @targetName("minus")
     def -(other: Vec3f): Vec3f = Vec3f(
       thiz.getX - other.getX,
@@ -32,10 +32,10 @@ object Vec3fOps:
     )
 
 
-  /**
-  * Multiplies a [[Vec3f]] and a [[Vec3f]].
-  * thiz method is a shorthand for component wise multiplication.
-  */
+    /**
+     * Multiplies a [[Vec3f]] and a [[Vec3f]].
+     * thiz method is a shorthand for component wise multiplication.
+     */
     @targetName("times")
     def *(other: Vec3f): Vec3f = Vec3f(
       thiz.getX * other.getX,
@@ -44,9 +44,9 @@ object Vec3fOps:
     )
 
 
-  /**
-  * Multiplies a [[Vec3f]] and a Float.
-  */
+    /**
+     * Multiplies a [[Vec3f]] and a [[Float]].
+     */
     @targetName("times")
     def *(other: Float): Vec3f = Vec3f(
       thiz.getX * other,
@@ -54,9 +54,9 @@ object Vec3fOps:
       thiz.getZ * other
     )
 
-  /**
-  * Divides a [[Vec3f]] and a Float.
-  */
+    /**
+     * Divides a [[Vec3f]] and a [[Float]].
+     */
     @targetName("div")
     def /(other: Float): Vec3f = Vec3f(
       thiz.getX / other,
@@ -65,16 +65,16 @@ object Vec3fOps:
     )
 
 
-  /**
-  * Negates a [[Vec3f]].
-  */
+    /**
+     * Negates a [[Vec3f]].
+     */
     @targetName("unaryMinus")
     def -(): Vec3f = thiz * (-1f)
 
     //region Type compatibility operator variations
-  /**
-  * Adds a [Vec3d] to a [[Vec3f]].
-  */
+    /**
+     * Adds a [[Vec3d]] to a [[Vec3f]].
+     */
     @targetName("plus")
     def +(other: Vec3d): Vec3f = Vec3f(
       thiz.getX + other.getX.toFloat,
@@ -83,9 +83,9 @@ object Vec3fOps:
     )
 
 
-  /**
-  * Adds a [Vec3i] to a [[Vec3f]].
-  */
+    /**
+     * Adds a [[Vec3i]] to a [[Vec3f]].
+     */
     @targetName("plus")
     def +(other: Vec3i): Vec3f = Vec3f(
       thiz.getX + other.getX.toFloat,
@@ -94,9 +94,9 @@ object Vec3fOps:
     )
 
 
-  /**
-  * Adds a [[Vector3d]] to a [[Vec3f]].
-  */
+    /**
+     * Adds a [[Vector3d]] to a [[Vec3f]].
+     */
     @targetName("plus")
     def +(other: Vector3d): Vec3f = Vec3f(
       thiz.getX + other.x.toFloat,
@@ -105,9 +105,9 @@ object Vec3fOps:
     )
 
 
-  /**
-  * Subtracts a [Vec3d] from a [[Vec3f]].
-  */
+    /**
+     * Subtracts a [[Vec3d]] from a [[Vec3f]].
+     */
     @targetName("minus")
     def -(other: Vec3d): Vec3f = Vec3f(
       thiz.getX - other.getX.toFloat,
@@ -116,9 +116,9 @@ object Vec3fOps:
     )
 
 
-  /**
-  * Subtracts a [Vec3i] from a [[Vec3f]].
-  */
+    /**
+     * Subtracts a [[Vec3i]] from a [[Vec3f]].
+     */
     @targetName("minus")
     def -(other: Vec3i): Vec3f = Vec3f(
       thiz.getX - other.getX.toFloat,
@@ -127,9 +127,9 @@ object Vec3fOps:
     )
 
 
-  /**
-  * Subtracts a [[Vector3d]] from a [[Vec3f]].
-  */
+    /**
+     * Subtracts a [[Vector3d]] from a [[Vec3f]].
+     */
     @targetName("minus")
     def -(other: Vector3d): Vec3f = Vec3f(
       thiz.getX - other.x.toFloat,
@@ -138,10 +138,10 @@ object Vec3fOps:
     )
 
 
-  /**
-  * Multiplies a [[Vec3f]] and a [Vec3d].
-  * thiz method is a shorthand for component wise multiplication.
-  */
+    /**
+     * Multiplies a [[Vec3f]] and a [[Vec3d]].
+     * thiz method is a shorthand for component wise multiplication.
+     */
     @targetName("times")
     def *(other: Vec3d): Vec3f = Vec3f(
       thiz.getX * other.getX.toFloat,
@@ -150,10 +150,10 @@ object Vec3fOps:
     )
 
 
-  /**
-  * Multiplies a [[Vec3f]] and a [Vec3i].
-  * thiz method is a shorthand for component wise multiplication.
-  */
+    /**
+     * Multiplies a [[Vec3f]] and a [[Vec3i]].
+     * thiz method is a shorthand for component wise multiplication.
+     */
     @targetName("times")
     def *(other: Vec3i): Vec3f = Vec3f(
       thiz.getX * other.getX.toFloat,
@@ -162,10 +162,10 @@ object Vec3fOps:
     )
 
 
-  /**
-  * Multiplies a [[Vec3f]] and a [[Vector3d]].
-  * thiz method is a shorthand for component wise multiplication.
-  */
+    /**
+     * Multiplies a [[Vec3f]] and a [[Vector3d]].
+     * thiz method is a shorthand for component wise multiplication.
+     */
     @targetName("times")
     def *(other: Vector3d): Vec3f = {
       Vec3f(
@@ -176,14 +176,14 @@ object Vec3fOps:
     }
 
     //region Vector specific operators
-  /**
-  * The dot product of a [[Vec3f]] and a [Vec3d].
-  */
+    /**
+     * The dot product of a [[Vec3f]] and a [[Vec3d]].
+     */
     def dot(other: Vec3d): Float = thiz dot Vec3f(other)
 
-  /**
-  * The cross product of a [[Vec3f]] and a [Vec3d].
-  */
+    /**
+     * The cross product of a [[Vec3f]] and a [[Vec3d]].
+     */
     def cross(other: Vec3d): Vec3f = Vec3f(
       (thiz.getY * other.getZ - thiz.getZ * other.getY).toFloat,
       (thiz.getZ * other.getX - thiz.getX * other.getZ).toFloat,
@@ -191,14 +191,14 @@ object Vec3fOps:
     )
 
 
-  /**
-  * The dot product of a [[Vec3f]] and a [[Vec3f]].
-  */
+    /**
+     * The dot product of a [[Vec3f]] and a [[Vec3f]].
+     */
     def dot(other: Vec3f): Float = thiz dot (other)
 
-  /**
-  * The cross product of a [[Vec3f]] and a [[Vec3f]].
-  */
+    /**
+     * The cross product of a [[Vec3f]] and a [[Vec3f]].
+     */
     def cross(other: Vec3f): Vec3f = Vec3f(
       thiz.getY * other.getZ - thiz.getZ * other.getY,
       thiz.getZ * other.getX - thiz.getX * other.getZ,
@@ -206,14 +206,14 @@ object Vec3fOps:
     )
 
 
-  /**
-  * The dot product of a [[Vec3f]] and a [Vec3i].
-  */
+    /**
+     * The dot product of a [[Vec3f]] and a [[Vec3i]].
+     */
     def dot(other: Vec3i): Float = thiz.dot(Vec3f(other.getX.toFloat, other.getY.toFloat, other.getZ.toFloat))
 
-  /**
-  * The cross product of a [[Vec3f]] and a [Vec3i].
-  */
+    /**
+     * The cross product of a [[Vec3f]] and a [[Vec3i]].
+     */
     def cross(other: Vec3i): Vec3f = Vec3f(
       thiz.getY * other.getZ - thiz.getZ * other.getY,
       thiz.getZ * other.getX - thiz.getX * other.getZ,
@@ -221,14 +221,14 @@ object Vec3fOps:
     )
 
 
-  /**
-  * The dot product of a [[Vec3f]] and a [[Vector3d]].
-  */
+    /**
+     * The dot product of a [[Vec3f]] and a [[Vector3d]].
+     */
     def dot(other: Vector3d): Float = thiz.dot(Vec3f(other.x.toFloat, other.y.toFloat, other.z.toFloat))
 
-  /**
-  * The cross product of a [[Vec3f]] and a [[Vector3d]].
-  */
+    /**
+     * The cross product of a [[Vec3f]] and a [[Vector3d]].
+     */
     def cross(other: Vector3d): Vec3f = Vec3f(
       (thiz.getY * other.z - thiz.getZ * other.y).toFloat,
       (thiz.getZ * other.x - thiz.getX * other.z).toFloat,
@@ -236,9 +236,9 @@ object Vec3fOps:
     )
 
 
-  /**
-  * The length of a [[Vec3f]].
-  */
+    /**
+     * The length of a [[Vec3f]].
+     */
     def length(): Float = {
       val x = thiz.getX
       val y = thiz.getY
@@ -246,9 +246,9 @@ object Vec3fOps:
       sqrt(x * x + y * y + z * z)
     }
 
-  /**
-  * The length squared of a [[Vec3f]].
-  */
+    /**
+     * The length squared of a [[Vec3f]].
+     */
     def lengthSquared(): Float = {
       val x = thiz.getX
       val y = thiz.getY
@@ -256,17 +256,17 @@ object Vec3fOps:
       x * x + y * y + z * z
     }
 
-  /**
-  * The [`x`][Vec3f.x] component of a [[Vec3f]].
-  */
+    /**
+     * The [`x`][[Vec3f.x]] component of a [[Vec3f]].
+     */
     def component1(): Float = thiz.getX
 
-  /**
-  * The [`y`][Vec3f.y] component of a [[Vec3f]].
-  */
+    /**
+     * The [`y`][[Vec3f.y]] component of a [[Vec3f]].
+     */
     def component2(): Float = thiz.getY
 
-  /**
-  * The [`z`][Vec3f.z] component of a [[Vec3f]].
-  */
+    /**
+     * The [`z`][[Vec3f.z]] component of a [[Vec3f]].
+     */
     def component3(): Float = thiz.getZ

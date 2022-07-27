@@ -8,9 +8,9 @@ import scala.annotation.targetName
 object Vec2fOps:
   extension (thiz: Vec2f)
 
-    /**
-     * Adds a [[[Vec2f]]] to a [[[Vec2f]]].
-     */
+  /**
+   * Adds a [[Vec2f]] to a [[Vec2f]].
+   */
     @targetName("add")
     def +(other: Vec2f): Vec2f = Vec2f(
       thiz.x + other.x,
@@ -18,7 +18,7 @@ object Vec2fOps:
     )
 
     /**
-     * Subtracts a [[[Vec2f]]] from a [[[Vec2f]]].
+     * Subtracts a [[Vec2f]] from a [[Vec2f]].
      */
     @targetName("minus")
     def -(other: Vec2f): Vec2f = Vec2f(

@@ -51,7 +51,7 @@ object Vector4fOps:
     }
 
     /**
-     * Multiplies a [[Vector4f]] and a Float.
+     * Multiplies a [[Vector4f]] and a [[Float]].
      */
     @targetName("times")
     def *(other: Float): Vector4f = {
@@ -64,7 +64,7 @@ object Vector4fOps:
     }
 
     /**
-     * Divides a [[Vector4f]] and a Float.
+     * Divides a [[Vector4f]] and a [[Float]].
      */
     @targetName("div")
     def /(other: Float): Vector4f = {
@@ -120,28 +120,28 @@ object Vector4fOps:
     }
 
     /**
-     * The [`x`][x] component of a [[Vector4f]].
+     * The [`x`][[Vector4f.x]] component of a [[Vector4f]].
      */
     def component1(): Float = {
       thiz.getX
     }
 
     /**
-     * The [`y`][y] component of a [[Vector4f]].
+     * The [`y`][[Vector4f.z]] component of a [[Vector4f]].
      */
     def component2(): Float = {
       thiz.getY
     }
 
     /**
-     * The [`z`][z] component of a [[Vector4f]].
+     * The [`z`][[Vector4f.z]] component of a [[Vector4f]].
      */
     def component3(): Float = {
       thiz.getZ
     }
 
     /**
-     * The [`w`][w] component of a [[Vector4f]].
+     * The [`w`][[Vector4f.w]] component of a [[Vector4f]].
      */
     def component4(): Float = {
       thiz.getW
