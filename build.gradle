@@ -32,13 +32,11 @@ allprojects {
 		}
 	}
 
-	tasks.withType(ScalaCompile).configureEach {
-		sourceCompatibility = JavaVersion.toVersion(java_version)
-		targetCompatibility = JavaVersion.toVersion(java_version)
-	}
+	tasks.withType(ScalaCompile).configureEach { }
 }
 
 subprojects {
+	apply(plugin: "scala")
 	apply(plugin: rootProject.libs.plugins.quilt.loom.get().pluginId)
 
 	group = "me.mycf.unofficial-quilt-scala-libraries"
@@ -52,6 +50,11 @@ subprojects {
 		})
 
 		modImplementation rootProject.libs.quilt.loader
+
+		// Scala 3 libs
+		implementation("org.scala-lang:scala3-library_3:${scala_version}")
+		// Depended on by Scala 3
+		implementation("org.scala-lang:scala-library:2.13.8")
 	}
 
 	tasks {

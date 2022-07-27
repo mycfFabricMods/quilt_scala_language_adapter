@@ -1,3 +1,8 @@
 dependencies {
 	implementation project(":core")
+
+	// Scala 3 libs
+	implementation("org.scala-lang:scala3-library_3:${scala_version}")
+	// Depended on by Scala 3
+	implementation("org.scala-lang:scala-library:2.13.8")
 }
