@@ -266,24 +266,3 @@ object Vec3iOps:
     def lengthSquared(): Int = {
       x * x + y * y + z * z
     }
-
-    /**
-     * The [`x`][[Vec3i.x]] component of a [[Vec3i]].
-     */
-    def component1(): Int = {
-      thiz.x
-    }
-
-    /**
-     * The [`y`][[Vec3i.y]] component of a [[Vec3i]].
-     */
-    def component2(): Int = {
-      thiz.y
-    }
-
-    /**
-     * The [`z`][[Vec3i.z]] component of a [[Vec3i]].
-     */
-    def component3(): Int = {
-      thiz.z
-    }

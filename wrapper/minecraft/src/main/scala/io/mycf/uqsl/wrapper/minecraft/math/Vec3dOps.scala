@@ -250,24 +250,4 @@ object Vec3dOps:
       thiz.crossProduct(Vec3d(other.x, other.y, other.z))
     }
 
-    /**
-     * The [`x`][[Vec3d.x]] component of a [[Vec3d]].
-     */
-    def component1(): Double = {
-      thiz.x
-    }
-
-    /**
-     * The [`y`][[Vec3d.y]] component of a [[Vec3d]].
-     */
-    def component2(): Double = {
-      thiz.y
-    }
-
-    /**
-     * The [`z`][[Vec3d.z]] component of a [[Vec3d]].
-     */
-    def component3(): Double = {
-      thiz.z
-    }
 

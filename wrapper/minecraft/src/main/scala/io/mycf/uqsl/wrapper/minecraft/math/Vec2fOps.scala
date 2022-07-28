@@ -105,13 +105,3 @@ object Vec2fOps:
      * The dot product of a [[Vec2f]] and a [[Vector2f]].
      */
     def dot(other: Vector2f): Float = thiz dot Vec2f(other.getX, other.getY)
-
-    /**
-     * The x [[Vec2f.x]] component of a [[Vec2f]].
-     */
-    def component1(): Float = thiz.x
-
-    /**
-     * The y [[Vec2f.y]] component of a [[Vec2f]].
-     */
-    def component2(): Float = thiz.y

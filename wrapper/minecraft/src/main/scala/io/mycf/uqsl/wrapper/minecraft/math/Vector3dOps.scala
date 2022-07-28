@@ -292,24 +292,3 @@ object Vector3dOps:
       thiz.x * thiz.x + thiz.y * thiz.y + thiz.z * thiz.z
     }
 
-    /**
-     * The [`x`][[Vector3d.x]] component of a [[Vector3d]].
-     */
-    def component1(): Double = {
-      thiz.x
-    }
-
-    /**
-     * The [`y`][[Vector3d.y]] component of a [[Vector3d]].
-     */
-    def component2(): Double = {
-      thiz.y
-    }
-
-    /**
-     * The [`z`][[Vector3d.z]] component of a [[Vector3d]].
-     */
-    def component3(): Double = {
-      thiz.z
-    }
-

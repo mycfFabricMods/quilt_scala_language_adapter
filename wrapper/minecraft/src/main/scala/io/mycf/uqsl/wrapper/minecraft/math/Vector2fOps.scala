@@ -150,17 +150,3 @@ object Vector2fOps:
     def lengthSquared(): Float = {
       thiz.getX * thiz.getX + thiz.getY * thiz.getY
     }
-
-    /**
-     * The [`x`][[Vector2f.x]] component of a [[Vector2f]].
-     */
-    def component1(): Float = {
-      thiz.getX
-    }
-
-    /**
-     * The [`y`][[Vector2f.y]] component of a [[Vector2f]].
-     */
-    def component2(): Float = {
-      thiz.getY
-    }

@@ -256,17 +256,3 @@ object Vec3fOps:
       x * x + y * y + z * z
     }
 
-    /**
-     * The [`x`][[Vec3f.x]] component of a [[Vec3f]].
-     */
-    def component1(): Float = thiz.getX
-
-    /**
-     * The [`y`][[Vec3f.y]] component of a [[Vec3f]].
-     */
-    def component2(): Float = thiz.getY
-
-    /**
-     * The [`z`][[Vec3f.z]] component of a [[Vec3f]].
-     */
-    def component3(): Float = thiz.getZ

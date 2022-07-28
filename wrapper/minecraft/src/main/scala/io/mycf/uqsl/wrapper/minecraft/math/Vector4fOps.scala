@@ -118,31 +118,3 @@ object Vector4fOps:
     def lengthSquared(): Float = {
       thiz.getX * thiz.getX + thiz.getY * thiz.getY + thiz.getZ * thiz.getZ + thiz.getW * thiz.getW
     }
-
-    /**
-     * The [`x`][[Vector4f.x]] component of a [[Vector4f]].
-     */
-    def component1(): Float = {
-      thiz.getX
-    }
-
-    /**
-     * The [`y`][[Vector4f.z]] component of a [[Vector4f]].
-     */
-    def component2(): Float = {
-      thiz.getY
-    }
-
-    /**
-     * The [`z`][[Vector4f.z]] component of a [[Vector4f]].
-     */
-    def component3(): Float = {
-      thiz.getZ
-    }
-
-    /**
-     * The [`w`][[Vector4f.w]] component of a [[Vector4f]].
-     */
-    def component4(): Float = {
-      thiz.getW
-    }
