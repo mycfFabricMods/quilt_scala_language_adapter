@@ -15,50 +15,31 @@
  * limitations under the License.
  */
 
+
 package io.mycf.uqsl.wrapper.minecraft.registry
 
-//import net.minecraft.block.Block
-//import net.minecraft.util.registry.Registry
-//import net.minecraft.util.Identifier
-//import io.mycf.uqsl.wrapper.minecraft.registry.RegistryDsl.{registerAllWith, register, withId}
-//
-//import scala.collection.mutable.ArrayBuffer
-//
-//object TestRegistry {
-//  opaque type MODID = String
-//  given MODID = "modid"
-//
-//  private val TEST_BLOCK: Block = ???
-//
-//  private def test() = {
-//    RegistryDsl.register("foobar") {
-//      TEST_BLOCK withId Identifier("namespace")
-//
-////      TEST_BLOCK withName "coolblock"
-////    }
-//        TEST_BLOCK.withName("name")
-////      TEST_BLOCK.withName("modid", "name")
-////    Registry.BLOCK registerAllWith "modid" {
-////      TEST_BLOCK withName "coolblock"
-////    }
-//  }
-//
-//
-////    RegistryDsl("modid").registryDsl {
-////      Registry.BLOCK withAction {
-////        TEST_BLOCK withName "test_3"
-////      }
-////      TEST_BLOCK withName "test_2" toRegistry Registry.BLOCK
-////    }
-//////    Registry.BLOCK withId "modid" {
-//////      TEST_BLOCK withName "test_3"
-//////    }
-////    Registry.BLOCK.withAction {
-////      TEST_BLOCK withId Identifier("modid","test_4")
-////    }
-////    TEST_BLOCK withId Identifier("modid", "test_5") toRegistry Registry.BLOCK
-////  }
-//
-//  }
-//}
+import io.mycf.uqsl.wrapper.minecraft.registry.RegistryExtensions.*
 
+import net.minecraft.block.Block
+import net.minecraft.util.Identifier
+import net.minecraft.util.registry.Registry
+
+private def test() = {
+  val TEST_BLOCK: Block = ???
+
+  RegistryDsl.registryDsl("foo") {
+    Registry.BLOCK registerAll {
+      TEST_BLOCK > "test_block"
+      TEST_BLOCK named Identifier("name", "something_else")
+    }
+    Registry.BLOCK {
+      TEST_BLOCK > "test_block"
+      TEST_BLOCK named Identifier("name", "something_else")
+    }
+    Registry.BLOCK from TEST_BLOCK named ""
+    Registry.BLOCK <<- TEST_BLOCK > ""
+  }
+
+  Registry.BLOCK from TEST_BLOCK named Identifier("modid", "block_name")
+  Registry.BLOCK <<- TEST_BLOCK > Identifier("modid", "block_name")
+}
