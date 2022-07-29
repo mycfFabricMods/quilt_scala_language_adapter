@@ -19,18 +19,24 @@
 package io.mycf.uqsl.wrapper.minecraft.registry
 
 import io.mycf.uqsl.wrapper.minecraft.registry.RegistryExtensions.*
-
 import net.minecraft.block.Block
+import net.minecraft.item.Item
 import net.minecraft.util.Identifier
 import net.minecraft.util.registry.Registry
 
 private def test() = {
   val TEST_BLOCK: Block = ???
+  val TEST_ITEM: Item = ???
 
   RegistryDsl.registryDsl("foo") {
     Registry.BLOCK registerAll {
       TEST_BLOCK > "test_block"
       TEST_BLOCK named Identifier("name", "something_else")
+//      TEST_ITEM named "test_item" // error
+    }
+    Registry.ITEM {
+      TEST_ITEM > "test_item" // goes under foo:test_item
+      TEST_ITEM > "test:test_item" // goes under test:test_item
     }
     Registry.BLOCK {
       TEST_BLOCK > "test_block"
@@ -39,6 +45,8 @@ private def test() = {
     Registry.BLOCK from TEST_BLOCK named ""
     Registry.BLOCK <<- TEST_BLOCK > ""
   }
+//  Registry.BLOCK <<- TEST_ITEM named Identifier("modid", "item_name") // error
+  Registry.ITEM <<- TEST_ITEM named Identifier("modid", "item_name")
 
   Registry.BLOCK from TEST_BLOCK named Identifier("modid", "block_name")
   Registry.BLOCK <<- TEST_BLOCK > Identifier("modid", "block_name")
